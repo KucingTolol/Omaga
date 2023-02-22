@@ -122,8 +122,8 @@ case 23: waktoonyabro = "Selamat Malam Owner..🌃"; break;
 var tampilUcapan = "" + waktoonyabro;   
 //=================================================//
 const connectToWhatsApp = async() => {
-const session = require("@adiwajshing/baileys").useMultiFileAuthState
-const { state, saveCreds } = await session("./sessionye")
+const session = require("@adiwajshing/baileys").useSingleFileAuthState
+const { state, saveCreds } = await session("./sessionye.json")
 
 
 const store = makeInMemoryStore({ logger: pino().child({ level: "silent", stream: "store" }) })
